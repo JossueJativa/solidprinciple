@@ -1,4 +1,4 @@
-# Principio Interface Segregation Principle #
+# Principio Interface Segregation #
 
   Al crear una interface que no se necesitan todos los métodos que se pusieron para todas las clases que se implementan esa interface, esto llega a ser un error de diseño, entonces se crean interfaces extras de funcionalidades que se requiere para clases en especifico, llegando a ser beneficioso para la mantenibilidad del código, las clases no deben verse obligadas a implementar interfaces que no necesitan.
 
