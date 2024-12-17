@@ -39,6 +39,7 @@
      
 ## Salida esperada ##
 
+```
   Saving user to the database...
   
   Email: example@domain.com
@@ -48,6 +49,7 @@
   Sending welcome email to example@domain.com
   
   Invalid email or password. User not added.
+```
 
   ## Autores ##
   
