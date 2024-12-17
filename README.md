@@ -1,56 +1,64 @@
 
-# Principio de single responsibility #
+# Principios SOLID #
 
-  El principio de single responsibility nos permite tener un código más modularizado el cual aumenta la mantenibilidad y legibilidad del código. Por un lado este principio puede ser tanto confuso ya que aveces   existen clases que parecen ser tan simples que dudas si hacer una clase para ello, pero este principio pide eso, haciendo que cada clase tenga una única razón por la cual cambiar, lo que hace mucho mas fácil hacer cambio y mejoras en el sistema a futuro.
-  
-  Para este proyecto se urilizó el principio de single responsibility con la finalidad de que la clase UserManager no tenga demasiadas responsabilidades, dado que eso provoca una dificultas eb el mantenimiento del código. 
-  
-  Ahora, con la separación en clases específicas, se puede decir que el proyecto tiene nuevas caracteristicas como:
-   
-    1.	Mantenibilidad: Cada clase tiene un propósito claro, facilitando la modificación de una funcionalidad sin afectar otras.
-   
-    2.	Escalabilidad: Es más sencillo agregar nuevas funcionalidades, como cambiar el sistema de notificación (por ejemplo, de correos a SMS) o modificar la forma de almacenar datos.
-   
-    3.	Pruebas Unitarias: Las clases independientes permiten probar cada parte del sistema de manera aislada.
+## Descripción ##
 
-## Estructura del proyecto ##
+Los principios SOLID son un conjunto de buenas prácticas de programación orientada a objetos que permiten escribir código más limpio, escalable y fácil de mantener. Estos principios fueron introducidos por Robert C. Martin (Uncle Bob) y se consideran la base para el desarrollo de software de alta calidad.
 
-|-- usermanager
-   
-    |-- database
-    
-        |-- ManagerDatabase.java
-        
-    |-- helpers
-    
-        |-- Notification.java
-        
-        |-- Validators.java
-        
-    |-- Main.java
-    
-    |-- UserManager.java
-    
-## Instruciones de ejecución ##
+El acrónimo SOLID representa los cinco principios fundamentales:
 
-  1. Verificar la existencia de la clase main
-  2. Dar click derecho a la clase main
-  3. Dar click en la opcion "Run Code"
-     
-## Salida esperada ##
+  S: Single Responsibility Principle (SRP)
+  
+  O: Open/Closed Principle (OCP)
+  
+  L: Liskov Substitution Principle (LSP)
+  
+  I: Interface Segregation Principle (ISP)
+  
+  D: Dependency Inversion Principle (DIP)
 
-```
-  Saving user to the database...
-  
-  Email: example@domain.com
-  
-  Password: password123
-  
-  Sending welcome email to example@domain.com
-  
-  Invalid email or password. User not added.
-```
+## Principios Explicados ##
 
-  ## Autores ##
+### 1. Single Responsibility Principle (SRP)###
+
+**Definición:**  Una clase debe tener una única responsabilidad y solo una razón para cambiar.
+
+**Explicación:**  Cada clase debe encargarse de una sola función específica. Esto evita que una clase se vuelva demasiado compleja y difícil de mantener.
+
+### 2. Open/Closed Principle (OCP) ###
+
+**Definición:** El software debe estar abierto para extensión, pero cerrado para modificación.
+
+**Explicación:** Puedes agregar nuevas funcionalidades sin modificar el código existente, usando interfaces o herencia.
+
+### 3. Liskov Substitution Principle (LSP) ###
+
+**Definición:** Los objetos de una clase base deben poder ser reemplazados por objetos de sus clases derivadas sin alterar el comportamiento del programa.
+
+**Explicación:** Las clases derivadas deben extender el comportamiento de la clase base sin romper la funcionalidad existente.
+
+### 4. Interface Segregation Principle (ISP) ###
+
+**Definición:** Las clases no deben verse obligadas a implementar interfaces que no necesitan.
+
+**Explicación:** Es mejor tener interfaces más pequeñas y específicas en lugar de una interfaz grande con métodos innecesarios.
+
+### 5. Dependency Inversion Principle (DIP) ###
+
+**Definición:** Las clases deben depender de abstracciones (interfaces) y no de implementaciones concretas.
+
+**Explicación:** Promueve la inyección de dependencias para que las clases sean más flexibles y fáciles de testear.
+
+## Beneficios de Aplicar SOLID ##
+
+**- Mantenimiento:** El código es más fácil de entender, modificar y extender.
+**- Reutilización:** Las clases y componentes pueden ser reutilizados en otros proyectos.
+**- Escalabilidad:** Es más sencillo agregar nuevas funcionalidades sin afectar el código existente.
+**- Pruebas:** Facilita la implementación de pruebas unitarias debido a la separación de responsabilidades.
+
+Al aplicar los principios SOLID, logramos un código más limpio, robusto y flexible. Estos principios promueven el uso adecuado de abstracciones, interfaces y herencia, lo que reduce la complejidad y los errores en los proyectos de software.
+
+
+## Autores ##
   
   Jossue Játiva, Enrique Merizalde, Julissa Ruales
