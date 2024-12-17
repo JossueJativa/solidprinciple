@@ -1,4 +1,4 @@
-# Principio de single responsibility #
+# Principio Liskov Substitution Principle #
 
 En la parte de la herencia, al realizar funcionalidades y un hijo no debería tener la capacidad de realizar alguno de los métodos, se define como una clase padre mal hecha, entonces para eso se realiza las interfaces, para que cuando se llegue a realizar alguna funcionalidad que no debe llega a ser de gran utilidad para los hijos, es mejor la interfaz para mejorar la legibilidad y su único funcionamiento en clases especificas, mejorando asi el código a ejecutar
   
