@@ -1,7 +1,5 @@
 package com.usermanager.database;
 
-import java.util.regex.Pattern;
-
 public class ManagerDatabase {
     private String email;
     private String password;
@@ -13,7 +11,7 @@ public class ManagerDatabase {
 
     public void saveToDatabase() {
         System.out.println("Saving user to the database...");
-        System.out.println("Email: " + this.email);
-        System.out.println("Password: " + this.password);
+        System.out.println("Email: " + email);
+        System.out.println("Password: " + password);
     }
 }

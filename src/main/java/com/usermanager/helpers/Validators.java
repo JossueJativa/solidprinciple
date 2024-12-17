@@ -12,10 +12,12 @@ public class Validators {
     }
 
     public boolean isValidEmail() {
-        return Pattern.matches("^[A-Za-z0-9+_.-]+@(.+)$", this.email);
+        System.out.println("Validating email: " + email);
+        return email != null && Pattern.matches("^[A-Za-z0-9+_.-]+@(.+)$", email);
     }
 
     public boolean isValidPassword() {
-        return this.password.length() >= 8;
+        System.out.println("Validating password: " + password);
+        return password != null && password.length() >= 8;
     }
 }
