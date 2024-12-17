@@ -1,5 +1,7 @@
 package com.usermanager.database;
 
+import java.util.regex.Pattern;
+
 public class ManagerDatabase {
     private String email;
     private String password;
