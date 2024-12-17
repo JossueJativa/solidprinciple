@@ -1,32 +1,27 @@
 package com.usermanager;
 
-import java.util.regex.Pattern;
+import com.usermanager.database.*;
+import com.usermanager.helpers.*;
 
 public class UserManager {
-    public void addUser(String email, String password) {
-        if (isValidEmail(email) && isValidPassword(password)) {
-            saveToDatabase(email, password);
-            sendWelcomeEmail(email);
+    private String email;
+    private String password;
+    
+    ManagerDatabase managerDatabase = new ManagerDatabase(this.email, this.password);
+    Notification notification = new Notification(this.email);
+    Validators validators = new Validators(this.email, this.password);
+
+    public UserManager(String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
+
+    public void addUser() {
+        if (validators.isValidEmail() && validators.isValidPassword()) {
+            managerDatabase.saveToDatabase();
+            notification.sendWelcomeEmail();
         } else {
             System.out.println("Invalid email or password. User not added.");
         }
-    }
-
-    private boolean isValidEmail(String email) {
-        return Pattern.matches("^[A-Za-z0-9+_.-]+@(.+)$", email);
-    }
-
-    private boolean isValidPassword(String password) {
-        return password.length() >= 8;
-    }
-
-    private void saveToDatabase(String email, String password) {
-        System.out.println("Saving user to the database...");
-        System.out.println("Email: " + email);
-        System.out.println("Password: " + password);
-    }
-
-    private void sendWelcomeEmail(String email) {
-        System.out.println("Sending welcome email to " + email);
     }
 }
